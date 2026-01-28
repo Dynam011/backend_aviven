@@ -20,8 +20,8 @@ const pagosRoutes = require('./routes/pagos');
 const app = express();
 app.use(cors({
 	origin: [
-		'http://localhost:4000',
-		'https://backend-aviven.onrender.com'
+		'http://localhost:3000',
+		'https://aviven.netlify.app'
 	],
 	credentials: true
 }));
