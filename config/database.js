@@ -10,6 +10,12 @@ const sequelize = new Sequelize(
     port: process.env.DB_PORT,
     dialect: 'postgres',
     logging: false, // Desactiva logs de SQL en consola
+    dialectOptions: {
+      ssl: {
+        require: true,
+        rejectUnauthorized: false // Cambia a true si tienes certificado válido
+      }
+    }
   }
 );
 
