@@ -18,7 +18,13 @@ const comprasRoutes = require('./routes/compras');
 const ventasRoutes = require('./routes/ventas');
 const pagosRoutes = require('./routes/pagos');
 const app = express();
-app.use(cors());
+app.use(cors({
+	origin: [
+		'http://localhost:4000',
+		'https://backend-aviven.onrender.com'
+	],
+	credentials: true
+}));
 app.use(express.json());
 app.use(morgan('dev'));
 
